@@ -1056,6 +1056,17 @@ body.fade-in {
   }
 }
 
+.project-link {
+  color: #1e90ff; /* blue */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+
 /* =============================================================================
    GALLERY SECTION STYLES (Graphic Designing Page)
    ============================================================================= */
