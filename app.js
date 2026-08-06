@@ -204,23 +204,3 @@ window.addEventListener("scroll", () => {
 });
 
 
-// =============================================================================
-// PROJECT SECTION FIX
-// Ensure all projects are visible
-// =============================================================================
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const projects = document.querySelectorAll(".table-row");
-
-
-    projects.forEach((project)=>{
-
-        project.style.opacity = "1";
-        project.style.visibility = "visible";
-        project.style.transform = "translateY(0)";
-
-    });
-
-
-});
