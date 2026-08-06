@@ -202,3 +202,21 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.querySelectorAll(".table-row");
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, { threshold: 0.1 });
+
+  rows.forEach((row) => {
+    observer.observe(row);
+  });
+});
