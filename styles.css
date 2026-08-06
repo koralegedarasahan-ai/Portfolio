@@ -920,152 +920,96 @@ body.fade-in {
    Development Page 
    ============================================================================= */
 
+/* =============================================================================
+   PROJECT TABLE STYLES (Fixes 4th Project Visibility)
+   ============================================================================= */
 .project-section {
   padding: 60px 20px;
-  background-color: #1f1f1f;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  color: #18ff4a;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.project-section .section-title::after {
-  content: "";
-  display: block;
-  width: 75%;
-  max-width: 1000px;
-  height: 1px;
-  margin: 10px auto 0;
-  background: #00fff7;
-  box-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
-  border-radius: 2px;
+  background-color: #0e0e0e;
 }
 
 .table-container {
-  width: 90%;
-  max-width: 950px;
-  margin: 40px auto;
-  border-collapse: separate;
-  border-spacing: 0 20px;
-  display: table;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Ensures all rows stack cleanly without overlapping */
 }
 
 .table-row {
-  display: table-row;
+  display: flex;
+  gap: 30px;
   background: #1a1a1a;
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 195, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Bright up photosho */
-
-.software-icons img[alt="Adobe Photoshop"],
-.software-icons img[alt="Adobe Illustrator"] {
-  filter: brightness(5) contrast(1.2);
+  border: 1px solid #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .table-row:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
-}
-
-.table-number,
-.table-details {
-  display: table-cell;
-  vertical-align: top;
-  padding: 20px 25px;
+  border-color: #00ffb3;
 }
 
 .table-number {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #00c3ff;
-  width: 80px;
-  text-align: center;
+  color: #00ffb3;
+  min-width: 60px;
 }
 
 .table-details {
-  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  flex: 1;
 }
 
 .project-title {
-  font-size: 1.4rem;
+  margin-top: 0;
+  font-size: 1.5rem;
   color: #ffffff;
-  margin-bottom: 10px;
 }
 
 .project-about {
-  font-size: 0.95rem;
-  color: #ccc;
+  color: #00ffb3;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
 .software-icons {
   display: flex;
-  gap: 20px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin: 15px 0;
   flex-wrap: wrap;
 }
 
 .software-icons img {
-  width: 35px;
-  height: 35px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.software-icons img:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 6px #00c3ff);
+  width: 28px;
+  height: 28px;
 }
 
 .project-desc {
-  font-size: 0.9rem;
-  color: #aaa;
-  line-height: 1.5;
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 700px) {
-  .table-container {
-    display: block;
-  }
-
-  .table-row {
-    display: block;
-    margin-bottom: 25px;
-    border-radius: 15px;
-  }
-
-  .table-number {
-    display: block;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-
-  .table-details {
-    display: block;
-    border: none;
-  }
+  color: #cccccc;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
 }
 
 .project-link {
-  color: #1e90ff; /* blue */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #00ffb3;
+  border: 1px solid #00ffb3;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  background-color: #00ffb3;
+  color: #0e0e0e;
 }
-
 
 /* =============================================================================
    GALLERY SECTION STYLES (Graphic Designing Page)
