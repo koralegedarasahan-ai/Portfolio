@@ -1014,117 +1014,128 @@ body.fade-in {
 /* =============================================================================
    GALLERY SECTION STYLES (Graphic Designing Page)
    ============================================================================= */
-/* Reset and body styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =============================================================================
+   PROJECT TABLE STYLES
+   ============================================================================= */
+
+.project-section {
+  padding: 60px 20px;
+  background-color: #0e0e0e;
+  position: relative;
+  overflow: visible;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #111;
-  color: #fff;
-  min-height: 100vh;
-}
-
-/* Gallery Section */
-.gallery-section {
-  padding: 50px 20px;
+.table-container {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  background-color: #111;
+  flex-direction: column;
+  gap: 40px;
+  height: auto;
+  overflow: visible;
 }
 
-.gallery-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 50px;
-  color: #0eff36; /* white text */
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
 
-.gallery-title:after {
-  content: "";
-  display: block;
-  width: 75%;
-  max-width: 1000px;
-  height: 1px;
-  margin: 10px auto 0;
-  background: #ffffff;
-  box-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
-  border-radius: 2px;
-}
-
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* Image styling */
-.gallery-container img {
-  width: 100%;
+.table-row {
+  display: flex;
+  gap: 30px;
+  background: #1a1a1a;
+  padding: 30px;
   border-radius: 15px;
-  cursor: pointer;
-  transition: transform 0.5s, box-shadow 0.5s;
+  border: 1px solid #333;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+
+  /* IMPORTANT FIX */
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.gallery-container img:hover {
-  transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+
+.table-row:hover {
+  transform: translateY(-5px);
+  border-color:#00ffb3;
 }
 
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
+
+.table-number {
+  font-size:2.5rem;
+  font-weight:bold;
+  color:#00ffb3;
+  min-width:60px;
 }
 
-.lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 15px;
-  animation: fadeIn 0.5s ease;
+
+.table-details {
+  flex:1;
 }
 
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 50px;
-  color: #fff;
-  cursor: pointer;
-  transition: color 0.3s;
+
+.project-title {
+  margin-top:0;
+  font-size:1.5rem;
+  color:white;
 }
 
-.close:hover {
-  color: #f00;
+
+.project-about {
+  color:#00ffb3;
+  font-weight:500;
+  margin-bottom:15px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+
+.software-icons {
+
+  display:flex;
+  gap:12px;
+  margin:15px 0;
+  flex-wrap:wrap;
+
+}
+
+
+.software-icons img {
+
+  width:28px;
+  height:28px;
+
+}
+
+
+.project-desc {
+
+  color:#cccccc;
+  line-height:1.6;
+  font-size:0.95rem;
+  margin-bottom:20px;
+
+}
+
+
+.project-link {
+
+  display:inline-block;
+  padding:10px 20px;
+  background:transparent;
+  color:#00ffb3;
+  border:1px solid #00ffb3;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+
+}
+
+
+.project-link:hover {
+
+  background:#00ffb3;
+  color:#0e0e0e;
+
 }
 
 /* =============================================================================
@@ -1434,4 +1445,39 @@ body {
       display: none;
     }
   }
+}
+
+
+/* FINAL FIX FOR PROJECT VISIBILITY */
+
+html,
+body {
+
+    min-height:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+
+}
+
+
+body.fade-in,
+body.fade-out {
+
+    transform:none !important;
+
+}
+
+
+.project-section {
+
+    min-height:auto !important;
+
+}
+
+
+.table-row {
+
+    visibility:visible !important;
+    display:flex !important;
+
 }
