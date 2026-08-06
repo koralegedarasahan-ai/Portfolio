@@ -204,19 +204,23 @@ window.addEventListener("scroll", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const rows = document.querySelectorAll(".table-row");
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  }, { threshold: 0.1 });
+// =============================================================================
+// PROJECT SECTION FIX
+// Ensure all projects are visible
+// =============================================================================
 
-  rows.forEach((row) => {
-    observer.observe(row);
-  });
+document.addEventListener("DOMContentLoaded", () => {
+
+    const projects = document.querySelectorAll(".table-row");
+
+
+    projects.forEach((project)=>{
+
+        project.style.opacity = "1";
+        project.style.visibility = "visible";
+        project.style.transform = "translateY(0)";
+
+    });
+
+
 });
